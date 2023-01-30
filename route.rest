@@ -11,3 +11,7 @@ Content-Type: application/json
     "content": "it's true",
     "password": "1234"
 }
+
+###
+
+GET http://localhost:3000/posts/63d7684a3cf9684d271efa2a

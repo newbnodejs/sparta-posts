@@ -4,7 +4,7 @@ const Post = require("./schema/post");
 
 router.get("/", async (_, res) => {
     try {
-        const posts = await Post.find(); // [{}, {}, {}]
+        const posts = await Post.find().select(["-password"]); // [{}, {}, {}]
         res.json({ data: posts });
     } catch (err) {
         res.status(500).json({ message: err.message });
@@ -27,6 +27,21 @@ router.post("/", async (req, res) => {
             content,
             password
         });
+        res.json({ data: post });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+router.get("/:id", async (req, res) => {
+    const { id } = req.params;
+
+    // .find({id})
+    // .findOne({id})
+
+    // .findbyId
+    try {
+        const post = await Post.findById(id).select(["-password"]);
         res.json({ data: post });
     } catch (err) {
         res.status(500).json({ message: err.message });
