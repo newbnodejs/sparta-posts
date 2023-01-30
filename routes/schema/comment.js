@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Types;
 
 const connectSchema = mongoose.Schema({
     user: {
@@ -12,6 +13,10 @@ const connectSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
+    },
+    postId: {
+        type: ObjectId,
+        required: true
     },
     createAt: {
         type: Date,

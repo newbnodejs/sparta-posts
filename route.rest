@@ -31,3 +31,6 @@ Content-Type: application/json
 {
     "password": "1234"
 }
+
+###
+GET Http://localhost:3000/comments
