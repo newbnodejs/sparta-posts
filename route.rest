@@ -1,7 +1,7 @@
+###
 GET Http://localhost:3000/posts
 
 ###
-
 POST Http://localhost:3000/posts
 Content-Type: application/json
 
@@ -13,5 +13,13 @@ Content-Type: application/json
 }
 
 ###
+GET Http://localhost:3000/posts/63d7ae2a534834f6c81c07e7
 
-GET http://localhost:3000/posts/63d7684a3cf9684d271efa2a
+###
+PATCH Http://localhost:3000/posts/63d7ae2a534834f6c81c07e7
+Content-Type: application/json
+
+{
+    "user": "amazing god",
+    "password": "123"
+}

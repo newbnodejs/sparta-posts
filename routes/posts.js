@@ -38,13 +38,44 @@ router.get("/:id", async (req, res) => {
 
     // .find({id})
     // .findOne({id})
-
-    // .findbyId
+    // .findById
     try {
         const post = await Post.findById(id).select(["-password"]);
         res.json({ data: post });
     } catch (err) {
         res.status(500).json({ message: err.message });
+    }
+});
+
+router.patch(":/id", async (req, res) => {
+    const { id } = req.params;
+    const { user, title, content, password } = req.body;
+
+    const post = await Post.findById(id);
+
+    const isPasswordCorrect = post.password === password;
+
+    if (isPasswordCorrect) {
+        if (user) {
+            post.user = user;
+        }
+
+        if (title) {
+            post.title = title;
+        }
+
+        if (content) {
+            post.content = content;
+        }
+
+        try {
+            const updatedPost = await post.save();
+            res.json({ data: updatedPost });
+        } catch (err) {
+            res.status(500).json({ message: err.message });
+        }
+    } else {
+        res.status(401).json({ message: "비밀번호가 틀렸습니다." });
     }
 });
 
