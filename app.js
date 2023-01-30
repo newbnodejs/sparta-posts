@@ -1,12 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const postRouter = requier("./routes/posts");
+
 const app = express();
 
-mongoose.connect("mongodb://localhost/sparta-posts");
+mongoose.connect("mongodb://127.0.0.1/sparta-posts");
 const db = mongoose.connection;
 
 db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("db connected!"));
+
+app.use("/posts", postRouter);
 
 app.listen(3000, () => console.log("server started"))
