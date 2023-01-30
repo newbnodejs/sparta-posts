@@ -13,13 +13,21 @@ Content-Type: application/json
 }
 
 ###
-GET Http://localhost:3000/posts/63d7ae2a534834f6c81c07e7
+GET Http://localhost:3000/posts/63d7684a3cf9684d271efa2a
 
 ###
-PATCH Http://localhost:3000/posts/63d7ae2a534834f6c81c07e7
+PATCH Http://localhost:3000/posts/63d7684a3cf9684d271efa2a
 Content-Type: application/json
 
 {
     "user": "amazing god",
-    "password": "123"
+    "password": "1234"
+}
+
+###
+DELETE Http://localhost:3000/posts/63d776e534db116ae6aa54b6
+Content-Type: application/json
+
+{
+    "password": "1234"
 }
