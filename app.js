@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const postRouter = requier("./routes/posts");
+const postRouter = require("./routes/posts");
 
 const app = express();
 
