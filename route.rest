@@ -1,1 +1,13 @@
 GET Http://localhost:3000/posts
+
+###
+
+POST Http://localhost:3000/posts
+Content-Type: application/json
+
+{
+    "user": "amazing person",
+    "title": "node.js is great",
+    "content": "it's true",
+    "password": "1234"
+}
