@@ -59,7 +59,7 @@ router.patch(":/id", async (req, res) => {
     const post = await Post.findById(id);  // null
 
     if (!post) {
-        return res.json({message: "게시글 조회에 실패하였습니다."});
+        return res.json({ message: "게시글 조회에 실패하였습니다." });
     }
 
     const isPasswordCorrect = post.password === password;

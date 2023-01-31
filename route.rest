@@ -20,17 +20,18 @@ PATCH Http://localhost:3000/posts/63d7684a3cf9684d271efa2a
 Content-Type: application/json
 
 {
-    "user": "amazing god",
+    "user": "amazing candy",
     "password": "1234"
 }
 
 ###
-DELETE Http://localhost:3000/posts/63d776e534db116ae6aa54b6
+DELETE Http://localhost:3000/posts/63d8d8692f2680d759cc767a
 Content-Type: application/json
 
 {
     "password": "1234"
 }
+
 
 ###
 GET Http://localhost:3000/comments
@@ -44,13 +45,24 @@ Content-Type: application/json
     "content": "node.js is the best",
     "password": "1234"
 }
+
 ###
-GET Http://localhost:3000/comments/63d8c65d7a227a12c93758ce
+GET Http://localhost:3000/comments/63d8c3953d558fadd6510f9e
 
 ###
 PATCH Http://localhost:3000/comments/63d8c3953d558fadd6510f9e
 Content-Type: application/json
 
 {
-    "content": "be the best"
+    "content": "be the best",
+    "password": "1234"
 }
+
+###
+DELETE Http://localhost:3000/comments/63d8c794c4d7ebe84289ba20
+Content-Type: application/json
+
+{
+    "password": "1234"
+}
+
