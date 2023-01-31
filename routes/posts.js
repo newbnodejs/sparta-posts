@@ -12,7 +12,7 @@ router.get("/", async (_, res) => {
 });
 
 router.post("/", async (req, res) => {
-    const { user, title, content, password} = req.body;
+    const { user, title, content, password } = req.body;
 
     // 객체 구조
     // const user = req.body.user;

@@ -34,3 +34,13 @@ Content-Type: application/json
 
 ###
 GET Http://localhost:3000/comments
+
+###
+POST Http://localhost:3000/comments/63d7684a3cf9684d271efa2a
+Content-Type: application/json
+
+{
+    "user": "shocking person",
+    "content": "node.js is the best",
+    "password": "1234"
+}
