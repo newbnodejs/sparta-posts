@@ -45,4 +45,12 @@ Content-Type: application/json
     "password": "1234"
 }
 ###
-GET Http://localhost:3000/comments/63d8c3953d558fadd6510f9e
+GET Http://localhost:3000/comments/63d8c65d7a227a12c93758ce
+
+###
+PATCH Http://localhost:3000/comments/63d8c3953d558fadd6510f9e
+Content-Type: application/json
+
+{
+    "content": "be the best"
+}
